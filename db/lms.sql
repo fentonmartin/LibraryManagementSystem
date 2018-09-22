@@ -221,9 +221,7 @@ INSERT INTO `issuecounter` (`id`, `qty`, `created_at`, `updated_at`) VALUES
 (75, 1, '2018-04-10 05:08:19', '2018-04-03 05:08:19');
 
 INSERT INTO `members` (`member_id`, `member_name`, `member_blood_group`, `member_reg_no`, `member_nid_no`, `member_email`, `member_dept`, `member_contact`, `created_at`, `updated_at`) VALUES
-(4895, 'Md. Hanif Sheikh', 'O+', 2147483647, 6604060910489, 'imhanifsheikh@gmail.com', 'Web Developer', 1993517653, '2015-02-14 01:37:48', '2018-04-26 12:11:32'),
-(5475, 'Mahedi Hasan', 'O+', 2147483647, 18586200030395, 'mahedihasan@yahoo.com', 'CSE', 1701484225, '2017-03-14 01:37:48', '2018-04-26 12:11:32'),
-(6264, 'Zakaria Mubarak Hussain', 'A+', 2147483647, 20881421308077, 'zakariamubarak@outlook.com', 'EEE', 1687411335, '2017-12-14 01:37:48', '2018-04-26 12:11:32'),
-(7745, 'Al-Amin Ferdous', 'B+', 2147483647, 27988969786711, 'alaminferdous@hotmail.com', 'ECE', 1531182690, '2017-07-19 01:37:48', '2018-04-26 12:11:32'),
-(8240, 'Md. Shaikul Islam', 'B+', 2147483647, 10789484525474, 'shaikulict@gmail.com', 'IT', 1613008384, '2017-02-14 01:37:48', '2018-04-26 12:11:32');
+(1, 'Md. Hanif Sheikh', 'Pengurus Muda', 2147483647, '12345678', 'fulan@sef.or.id', 'Sesuatu', '1993517653', '2015-02-14 01:37:48', '2018-04-26 12:11:32'),
+(2, 'Mahedi Hasan', 'Pengurus Muda', 2147483647, '1234', 'test@sef.or.id', 'Hello', '1701484225', '2017-03-14 01:37:48', '2018-04-26 12:11:32'),
+(3, 'Zakaria Mubarak Hussain', 'Pengurus Muda', 2147483647, '123456', 'fulan2@sef.or.id', 'Kyaa', '1687411335', '2017-12-14 01:37:48', '2018-04-26 12:11:32');
 
