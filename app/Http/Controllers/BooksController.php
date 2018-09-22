@@ -102,7 +102,7 @@ class BooksController extends Controller
     $rules = [
                     'id',
                     'book_name' => 'required',
-                    'book_author' => 'required|min:4',
+                    'book_author' => 'required|min:1',
                     'book_category' => 'required',           
                     'stock_qty' => ['required',
                     Rule::notIn(['0'])]
@@ -111,9 +111,8 @@ class BooksController extends Controller
     $messages = [
                     'book_name.required' => 'Book name is required!',
                     'book_author.required' => 'Author name is required!',
-                    'book_author.min' => 'Author name should be at least 4 characters!',
+                    'book_author.min' => 'Author name should be at least 1 character!',
                     'book_category.required' => 'Category is required',
-
 
                     'stock_qty.required' => 'Stock Quantity is required!',
                     'stock_qty' => 'Stock Can not be 0.'         
@@ -136,8 +135,8 @@ class BooksController extends Controller
         return response()->json($book);
         }
     }
-// Get Book Information to set in input fields for UpdateBook.
 
+// Get Book Information to set in input fields for UpdateBook.
     public function update(Request $request)
     {
         if($request->ajax()){
@@ -168,7 +167,7 @@ class BooksController extends Controller
         // Add Rules
             $rules = [
             'book_name' => 'required',
-            'book_author' => 'required|min:4',
+            'book_author' => 'required|min:1',
             'book_category' => 'required',           
             'stock_qty' => ['required',
             Rule::notIn(['0'])]
@@ -177,7 +176,7 @@ class BooksController extends Controller
             $messages = [
             'book_name.required' => 'Book name is required!',
             'book_author.required' => 'Author name is required!',
-            'book_author.min' => 'Author name should be at least 4 characters!',
+            'book_author.min' => 'Author name should be at least 1 character!',
             'book_category.required' => 'Category is required',
             
             'stock_qty.required' => 'Stock Quantity is required!',
@@ -191,7 +190,6 @@ class BooksController extends Controller
             }
 
 // Update Book Database and give a json response to show ajax notification
-
             if ($request->ajax()) {
             $book = Book::find($request->id)->update($request->all());
             $book = DB::table('books')
@@ -218,6 +216,5 @@ class BooksController extends Controller
         }
                
     }
-
 
     }
