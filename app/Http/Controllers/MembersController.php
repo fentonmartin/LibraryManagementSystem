@@ -30,10 +30,10 @@ class MembersController extends Controller
     }
     public function update(Request $request){
     	$rules = [
-    		'member_name' => 'required|min:4',
+    		'member_name' => 'required|min:1',
             'member_email' => 'required|email|unique:members',
-            'member_contact' => 'required|min:11',
-            'member_nid_no' => 'required|unique:members|min:4|max:12'
+            'member_contact' => 'required|min:1',
+            'member_nid_no' => 'required|unique:members|min:1|max:12'
             ];
         $messages = [
             'member_name.required' => 'Member name is required!',
@@ -43,8 +43,8 @@ class MembersController extends Controller
             'member_contact.required' => 'Mobile Number is required!',
             'member_contact.min' => 'Invalid Mobile Number',
             'member_nid_no.required' => 'NID is required',
-            'member_nid_no.min' => 'NID number cannot be less than 13 characters',
-            'member_nid_no.max' => 'NID number cannot be greater than 17 characters'
+            'member_nid_no.min' => 'NID number cannot be less than 1 characters',
+            'member_nid_no.max' => 'NID number cannot be greater than 12 characters'
          
         ];
 
@@ -89,10 +89,10 @@ class MembersController extends Controller
     public function store(Request $request)
     {   
     	$rules = [
-    		'member_name' => 'required|min:4',
+            'member_name' => 'required|min:1',
             'member_email' => 'required|email|unique:members',
-            'member_contact' => 'required|min:11',
-            'member_nid_no' => 'required|unique:members|min:4|max:12'
+            'member_contact' => 'required|min:1',
+            'member_nid_no' => 'required|unique:members|min:1|max:12'
             ];
         $messages = [
             'member_name.required' => 'Member name is required!',
@@ -103,8 +103,8 @@ class MembersController extends Controller
             'member_contact.min' => 'Invalid Mobile Number',
             'member_nid_no.required' => 'NID is required',
             'member_nid_no.unique' => 'NID already used in another account!',
-            'member_nid_no.min' => 'NID number cannot be less than 13 characters',
-            'member_nid_no.max' => 'NID number cannot be greater than 17 characters'
+            'member_nid_no.min' => 'NID number cannot be less than 1 characters',
+            'member_nid_no.max' => 'NID number cannot be greater than 12 characters'
          
         ];   
      $validator = Validator::make($request->all(), $rules, $messages);
