@@ -20,14 +20,11 @@
         <div class="col-md-12">
             <div class="card">
                                 <div class="card-header" data-background-color="custom-issuebook">
-                                    <h4 style="display: inline-block;" class="title">Issue List
-<!-- @if ($not_return_text == 1)
+                                    <h4 class="title">Issue List
+@if ($not_return_text == 1)
                     {{ '> Not Returned' }}
-@endif -->
+@endif
                                     </h4>
-                                    <a style="cursor: pointer;" type="button" rel="tooltip" title="" class="add_book pull-right" data-toggle="modal" data-target="#IssueModal" data-original-title="Add New Issue">   
-                 <i class="material-icons">add</i>
-                </a>
                                 </div>
                                 <div class="card-content table-responsive">
                                     <table class="table table-hover">
