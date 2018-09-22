@@ -31,9 +31,9 @@ class MembersController extends Controller
     public function update(Request $request){
     	$rules = [
     		'member_name' => 'required|min:4',
-            'member_email' => 'required|email',
+            'member_email' => 'required|email|unique:members',
             'member_contact' => 'required|min:11',
-            'member_nid_no' => 'required|min:13|max:17'
+            'member_nid_no' => 'required|unique:members|min:4|max:12'
             ];
         $messages = [
             'member_name.required' => 'Member name is required!',
@@ -92,7 +92,7 @@ class MembersController extends Controller
     		'member_name' => 'required|min:4',
             'member_email' => 'required|email|unique:members',
             'member_contact' => 'required|min:11',
-            'member_nid_no' => 'required|unique:members|min:13|max:17'
+            'member_nid_no' => 'required|unique:members|min:4|max:12'
             ];
         $messages = [
             'member_name.required' => 'Member name is required!',
