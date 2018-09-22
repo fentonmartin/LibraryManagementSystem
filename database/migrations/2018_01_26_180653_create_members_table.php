@@ -16,12 +16,12 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('member_id');
             $table->string('member_name');
+            $table->string('member_email')->unique();
+            $table->string('member_nid_no')->nullable();
             $table->string('member_blood_group')->nullable();            
-            $table->integer('member_reg_no')->nullable();
-            $table->bigInteger('member_nid_no')->unique();
-            $table->string('member_email')->unique();;
+            $table->string('member_reg_no')->nullable();
             $table->string('member_dept')->nullable();
-            $table->integer('member_contact');
+            $table->string('member_contact')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
